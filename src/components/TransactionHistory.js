@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import { initialTransactions } from "../context/GlobalState";
-import { Transaction } from "../components/Transaction";
+
+import { GlobalContext } from "../context/GlobalState";
+
+import { Transaction } from "./Transaction";
 
 export const TransactionHistory = () => {
-  const { transactions } = useContext(initialTransactions);
+  const { transactions } = useContext(GlobalContext);
 
   return (
     <div>
