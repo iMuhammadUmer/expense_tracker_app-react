@@ -27,6 +27,7 @@ body {
   width: 450px;
   background-color: var(--blue);
   padding: 0 1em 0 1em;
+  border-radius: 5px;
 }
 
 h1 {
@@ -106,6 +107,7 @@ input[type="number"] {
 }
 
 .btn {
+  height: 40px;
   cursor: pointer;
   background-color: var(--darkBlue);
   box-shadow: var(--box-shadow);
@@ -113,10 +115,13 @@ input[type="number"] {
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px 0;
-  padding: 10px;
+  margin-top: 1em;
   width: 100%;
   font-weight: bold;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 
 .btn:focus,
@@ -143,6 +148,7 @@ input[type="number"] {
 
 .list li.plus {
   border-right: 5px solid #29834f;
+  transition: 0.3s;
 }
 
 .list li.plus:hover {
@@ -152,6 +158,7 @@ input[type="number"] {
 }
 .list li.minus {
   border-right: 5px solid #7a261d;
+  transition: 0.3s;
 }
 .list li.minus:hover {
   border-right: 5px solid #7a261d;
