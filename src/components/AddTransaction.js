@@ -1,33 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+// Import the Global State
+import { GlobalContext } from "../context/GlobalState";
 
 export const AddTransaction = () => {
-  const [description, setDescription] = useState();
-  const [transactionAmount, setTransactionAmount] = useState();
+  const [description, setDescription] = useState("");
+  const [transactionAmount, setTransactionAmount] = useState("");
+
+  const { addTransaction } = useContext(GlobalContext);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const newTransaction = {
+      id: new Date().getTime(),
+      description,
+      transactionAmount: +transactionAmount,
+    };
+
+    addTransaction(newTransaction);
+  };
 
   return (
     <div>
       <h3>Add New Transaction</h3>
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="description">Description</label>
           <input
             type="text"
             id="description"
-            placeholder="Enter Transaction Details"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            required
+            placeholder="Detail of Transaction"
+            required="required"
           />
         </div>
         <div className="form-control">
-          <label htmlFor="transactionAmount">Transaction Amount</label>
+          <label htmlFor="transactionamount">Transaction Amount</label>
           <input
             type="number"
-            id="transactionAmount"
-            placeholder="Enter Transaction Amount"
+            id="transactionamount"
             value={transactionAmount}
             onChange={(e) => setTransactionAmount(e.target.value)}
-            required
+            placeholder="Dollar Value of Transaction"
+            required="required"
           />
         </div>
         <button className="btn">Add Transaction</button>
