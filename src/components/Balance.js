@@ -15,8 +15,8 @@ export const Balance = () => {
 
   return (
     <div>
-      <h4>Current Balance</h4>
-      <h1 id="balance">${balance}</h1>
+      <h2>Current Balance</h2>
+      <h1 id="balance">{balance}</h1>
     </div>
   );
 };
