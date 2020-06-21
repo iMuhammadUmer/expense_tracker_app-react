@@ -23,6 +23,9 @@ function App() {
         <TransactionHistory />
         <AddTransaction />
       </div>
+      <p>
+        Made by <a href="https://github.com/iMuhammadUmer">Muhammad Umer</a>
+      </p>
     </GlobalProvider>
   );
 }
