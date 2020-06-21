@@ -24,7 +24,10 @@ function App() {
         <AddTransaction />
       </div>
       <p>
-        Made by <a href="https://github.com/iMuhammadUmer">Muhammad Umer</a>
+        Made by{" "}
+        <a target="blank" href="https://github.com/iMuhammadUmer">
+          Muhammad Umer
+        </a>
       </p>
     </GlobalProvider>
   );
